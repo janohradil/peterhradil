@@ -1,9 +1,9 @@
 /* styles.css */
 body {
     font-family: Arial, sans-serif;
-    background-color: #a5c3f0;
-    background-image: url('/static/img/tools.png');
-    background-repeat: repeat;
+    background-color: #f0dca5;
+    background-image: url('/static/img/honey_bee_on_flowers.png');
+    background-size: cover;
 }
 
 .navbar {
@@ -34,29 +34,36 @@ body {
 }
 
 h1 {
-    color: #2c3e50;
+    color: #f5e9db;
 }
 
 h2 {
-    color: #354f69;
+    color: #f8f2e6;
 }
 
 h3 {
-    color: #325272;
+    color: #f7f3e1;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin-bottom: 1.2rem;
 }
 
 p {
     text-align: justify;
+    color: white;
 }
 
 .text-indent {
-    text-indent: 2em; /* Adjust the value as needed */
+    text-indent: 2em;
+    /* Adjust the value as needed */
 }
- 
+
 .form_inputs input,
 .form_inputs textarea {
     border: 1px solid #ccc;
@@ -68,7 +75,9 @@ p {
     background-color: #d0ddf1;
 }
 
-.card {background-color: #cedef7;}
+.card {
+    background-color: #cedef7;
+}
 
 .card-title {
     font-weight: bold;
@@ -112,7 +121,7 @@ p {
     flex-wrap: wrap;
     justify-content: center;
 }
-  
+
 .gallery img {
     width: 300px;
     height: 180px;
@@ -165,7 +174,16 @@ footer p {
 }
 
 main {
-    background-color: rgba(165, 195, 240, 0.3);
+    padding: 1rem;
+}
+
+main .dark-bg {
+    background-color: rgba(36, 33, 29, 0.7);
+}
+
+main p {
+    padding: 0.1rem 1rem;
+    text-indent: 2rem;
 }
 
 ul {
@@ -177,6 +195,7 @@ ul {
 .transform {
     transition: transform 0.3s;
 }
+
 .rotate-180 {
     transform: rotate(180deg) scale(0.3);
 }
@@ -184,10 +203,12 @@ ul {
 .transition-enter-active {
     transition: opacity 0.4s ease-out, transform 0.4s ease-out;
 }
+
 .transition-enter-start {
     opacity: 0;
     transform: translateY(-5px) scale(.7);
 }
+
 .transition-enter-end {
     opacity: 1;
     transform: translateY(0) scale(1);

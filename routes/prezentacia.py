@@ -24,10 +24,27 @@ IMAGE_DIR = "static/img"
 async def home(request: Request, current_year: dict = Depends(get_year)):
     return templates.TemplateResponse("home.html", {"request": request, **current_year})
 
+
+@router_prezentacia.get("/home-core", response_class=HTMLResponse)
+async def home_core(request: Request):
+    return templates.TemplateResponse("home_core.html", {"request": request})
+
+
+@router_prezentacia.get("/honey-extraction", response_class=HTMLResponse)
+async def honey_extraction_view(request: Request, current_year: dict = Depends(get_year)):
+    """Return the honey extraction page."""
+    return templates.TemplateResponse("honey_extraction.html", {"request": request, **current_year})
+
+
 @router_prezentacia.get("/anatomy", response_class=HTMLResponse)
 async def anatomy_view(request: Request, current_year: dict = Depends(get_year)):
     """Return the anatomy page."""
     return templates.TemplateResponse("anatomy.html", {"request": request, **current_year})
+
+
+@router_prezentacia.get("/anatomy-core", response_class=HTMLResponse)
+async def anatomy_core(request: Request):
+    return templates.TemplateResponse("anatomy_core.html", {"request": request})
 
 # @router_prezentacia.get("/portfolio_short", response_class=HTMLResponse)
 # async def portfolio_view(request: Request, current_year: dict = Depends(get_year)):
@@ -73,24 +90,38 @@ async def anatomy_view(request: Request, current_year: dict = Depends(get_year))
 #     return templates.TemplateResponse("projekt.html", {"request": request, "data": projekt, **current_year})
 
 @router_prezentacia.get("/pollinators", response_class=HTMLResponse)
-async def contact_view(request: Request, current_year: dict = Depends(get_year)):
-    """Return the contact page."""
+async def pollinators_view(request: Request, current_year: dict = Depends(get_year)):
+    """Return the pollinators page."""
     return templates.TemplateResponse("pollinators.html", {"request": request, **current_year})
+
+@router_prezentacia.get("/pollinators-core", response_class=HTMLResponse)
+async def pollinators_core(request: Request):
+    return templates.TemplateResponse("pollinators_core.html", {"request": request})
 
 
 @router_prezentacia.get("/science", response_class=HTMLResponse)
-async def contact_view(request: Request, current_year: dict = Depends(get_year)):
-    """Return the contact page."""
+async def science_view(request: Request, current_year: dict = Depends(get_year)):
+    """Return the science page."""
     return templates.TemplateResponse("science.html", {"request": request, **current_year})
 
+@router_prezentacia.get("/science-core", response_class=HTMLResponse)
+async def science_core(request: Request):
+    return templates.TemplateResponse("science_core.html", {"request": request})
 
 @router_prezentacia.get("/challenges", response_class=HTMLResponse)
-async def contact_view(request: Request, current_year: dict = Depends(get_year)):
-    """Return the contact page."""
+async def challenges_view(request: Request, current_year: dict = Depends(get_year)):
+    """Return the challenges page."""
     return templates.TemplateResponse("challenges.html", {"request": request, **current_year})
 
+@router_prezentacia.get("/challenges-core", response_class=HTMLResponse)
+async def challenges_core(request: Request):
+    return templates.TemplateResponse("challenges_core.html", {"request": request})
 
 @router_prezentacia.get("/lessons", response_class=HTMLResponse)
-async def contact_view(request: Request, current_year: dict = Depends(get_year)):
-    """Return the contact page."""
+async def lessons_view(request: Request, current_year: dict = Depends(get_year)):
+    """Return the lessons page."""
     return templates.TemplateResponse("lessons.html", {"request": request, **current_year})
+
+@router_prezentacia.get("/lessons-core", response_class=HTMLResponse)
+async def lessons_core(request: Request):
+    return templates.TemplateResponse("lessons_core.html", {"request": request})

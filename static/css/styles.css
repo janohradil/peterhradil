@@ -177,8 +177,31 @@ main {
     padding: 1rem;
 }
 
-main .dark-bg {
+.dark-bg>div {
     background-color: rgba(36, 33, 29, 0.7);
+}
+
+#home #new_content a {
+    color: yellow;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+#home #new_content a {
+    padding: 1rem 0;
+    cursor: default;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#home #new_content>a:hover {
+    cursor: pointer;
+    color: orange;
+    font-size: 1.3rem;
+}
+
+#toggle-content {
+    color: rgb(255, 56, 56);
+    padding-top: 1rem;
 }
 
 main p {

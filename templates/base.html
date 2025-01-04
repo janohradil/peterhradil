@@ -38,6 +38,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li><a class="nav-link" href="/">Home</a></li>
+                        <li><a class="nav-link" href="/honey-extraction">Harvest</a></li>
                         <li><a class="nav-link" href="/anatomy">Anatomy</a></li>
                         <li><a class="nav-link" href="/pollinators">Pollinators</a></li>
                         <li><a class="nav-link" href="/science">Science</a></li>
@@ -49,9 +50,16 @@
             </div>
         </div>
     </nav>
-    <main class="container main-block mt-4">
+    <main class="container main-block mt-4 text-center dark-bg">
         {% block content %}{% endblock %}
+        <!-- <div div="home__section" hx-get="/home-core" hx-trigger="click">Home</div>
+        <div div="anatomy__section" hx-get="/anatomy-core" hx-trigger="click">Anatomy</div>
+        <div div="pollinators__section" hx-get="/pollinators-core" hx-trigger="click">Pollinators</div>
+        <div div="science__section" hx-get="/science-core" hx-trigger="click">Science</div>
+        <div div="challenges__section" hx-get="/challenges-core" hx-trigger="click">Challenges</div>
+        <div div="lessons__section" hx-get="/lessons-core" hx-trigger="click">Lessons</div> -->
     </main>
+
 
     <!-- Footer Section -->
     <footer class="bg-dark text-white mt-5 py-4">

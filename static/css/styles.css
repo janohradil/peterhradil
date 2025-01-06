@@ -12,25 +12,28 @@ body {
     z-index: 100;
 }
 
-/* .navbar-toggler-icon {
-    display: inline-block;
-    width: 1.5em;
-    height: 1.5em;
-    vertical-align: middle;
-    content: "";
-    background: no-repeat center center;
-    background-size: 100% 100%;
+#navbarSupportedContent a {
+    transition: font-size 900ms;
+    transition: color 900ms;
 }
-.navbar-toggler-icon.open {
-    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"%3E%3Cpath stroke="rgba%28255, 255, 255, 0.5%29" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"%3E%3C/path%3E%3C/svg%3E');
+
+#navbarSupportedContent a:hover {
+    color: #faba7f;
+    font-size: large;
+    padding: 0.4rem;
+    transition: font-size 900ms;
+    transition: padding 900ms;
+    transition: color 900ms;
 }
-.navbar-toggler-icon.close {
-    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"%3E%3Cpath stroke="rgba%28255, 255, 255, 0.5%29" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"%3E%3C/path%3E%3C/svg%3E');
-} */
 
 .navbar-brand {
     font-weight: bold;
     font-size: 1.5rem;
+}
+
+.navbar a:hover {
+    color: yellow;
+    transition: 300ms;
 }
 
 h1 {
@@ -171,6 +174,16 @@ footer p {
     margin-bottom: 0.3rem;
 }
 
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #f7dda6;
+    transition: color 300ms;
+}
+
 .main-block {
     display: flex;
     flex-direction: column;
@@ -212,17 +225,25 @@ main {
     padding: 1rem 0;
     cursor: default;
     background-color: rgba(0, 0, 0, 0);
+    transition: font-size 300ms;
 }
 
-#home #new_content>a:hover {
+#home #new_content a:hover {
     cursor: pointer;
     color: orange;
     font-size: 1.3rem;
+    transition: font-size 300ms;
 }
 
 #toggle-content {
-    color: rgb(255, 56, 56);
     padding-top: 1rem;
+    cursor: pointer;
+    transition: color 300ms;
+}
+
+#toggle-content:hover {
+    color: #e28024;
+    transition: 300ms;
 }
 
 main p {

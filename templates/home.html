@@ -12,7 +12,7 @@
             <span x-text="show_new ? 'Hide Content' : 'Show Menu Links'"></span>
         </h2>
         <template x-if="show_new">
-            <div id="new_content" style="display: block" hx-swap="outerHTML">
+            <div id="new_content" style="display: block" hx-swap="outerHTML transition: 500ms">
                 <a style="display: block" hx-get="/home-core">Home</a>
                 <a style="display: block" hx-get="/anatomy-core">Anatomy</a>
                 <a style="display: block" hx-get="/pollinators-core">Pollinators</a>
